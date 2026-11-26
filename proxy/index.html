@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign-in browser</title>
+    <link rel="stylesheet" href="/proxy/style.css">
+    <script src="/proxy/scramjet/scramjet.js"></script>
+    <script src="/proxy/controller/controller.api.js"></script>
+
+    <link rel="reload" href="/blox/" as="script">
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/proxy/">Sign in</a>
+      <form id="address-form">
+        <label class="sr-only" for="address">Website URL</label>
+        <input id="address" autocomplete="url" spellcheck="false" aria-describedby="status">
+        <button type="submit">Go</button>
+      </form>
+      <a class="player" href="/blox/">Open player</a>
+    </header>
+    <p id="status" role="status" aria-live="polite">Starting the sign-in browser…</p>
+    <iframe id="browser" title="Sign-in page"></iframe>
+    <script type="module" src="/proxy/main.js"></script>
+  </body>
+</html>
